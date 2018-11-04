@@ -25,7 +25,7 @@ public class WrappingException {
 	try {
 	    ThirdPartyClass.doThirdPartyMethod();
 	} catch (ThirdPartyException e) {
-	    throw new CustomException(e.getMessage());
+	    throw new CustomException(e.getMessage(),e);
 	}
     }
 
