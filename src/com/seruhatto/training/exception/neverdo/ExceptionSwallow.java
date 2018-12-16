@@ -19,27 +19,24 @@ public class ExceptionSwallow {
     private static Logger logger = Logger.getLogger(ExceptionSwallow.class.getName());
 
     public static void main(String[] args) {
+
 	String responseCode = sendMessage();
-	if (responseCode.equals("200")) {
-
-	} else if (responseCode.equals("400")) {
-
+	if (responseCode == null) {
+	    logger.severe("Message has not been sent, There is a network problem.");
 	} else {
-
+	    logger.info("Message has been sent with status code :" + responseCode);
 	}
     }
 
     private static String sendMessage() {
-
 	try {
-	    // Something is Wrong
 	    String responseCode = null;
-	    //send a message and receive a response
-	    responseCode.toString();
-	    return responseCode;
+	    // Something is Wrong
+
+	    // send a message and receive a response
+	    return responseCode.toString();
 	} catch (Exception e) {
 	    return null;
 	}
-
     }
 }

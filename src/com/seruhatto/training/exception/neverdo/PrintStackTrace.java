@@ -24,6 +24,8 @@ public class PrintStackTrace {
 	    e.printStackTrace();//don't do this.
 	    System.out.println("Error Print:"+e.getMessage());//don't do this
 	    logger.log(Level.SEVERE, "Error occured " + e.getMessage());//You can pass "e" variable to log method instead of e.getMessage
+	    //Correct way: 
+	    //logger.log(Level.SEVERE, "Error occured " ,e);
 	}
     }
 

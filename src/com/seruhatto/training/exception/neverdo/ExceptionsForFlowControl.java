@@ -2,6 +2,10 @@ package com.seruhatto.training.exception.neverdo;
 
 import java.util.logging.Logger;
 
+/**
+ * Never use exceptions for flow control in your program
+ * It makes code hard to read, understand and ugly.
+ */
 public class ExceptionsForFlowControl {
     private static Logger logger = Logger.getLogger(ExceptionsForFlowControl.class.getName());
 

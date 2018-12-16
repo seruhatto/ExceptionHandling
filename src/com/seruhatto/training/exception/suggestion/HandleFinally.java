@@ -24,6 +24,7 @@ public class HandleFinally {
     private static void doMethod() throws Exception {
 
 	try {
+	    getConnection();
 	    // Something is Wrong
 	    String abc = null;
 	    abc.toString();
@@ -32,11 +33,18 @@ public class HandleFinally {
 	}
     }
 
+    private static void getConnection() {
+	// creates a connection
+    }
+
     private static void releaseAndClear() throws Exception {
 	try {
+	    //close connection
+	    //release/clear or close your object.
+	    logger.log(Level.INFO,"releaseAndClear");
 	    throw new Exception("Error during Release");
 	} catch (Exception e) {
-	    logger.log(Level.SEVERE, "releaseAndClear does not run ", e);
+	    logger.log(Level.SEVERE, "releaseAndClear could not run ", e);
 	}
     }
 }

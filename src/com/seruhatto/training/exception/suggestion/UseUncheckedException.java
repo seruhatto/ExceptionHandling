@@ -1,9 +1,9 @@
 package com.seruhatto.training.exception.suggestion;
 
-import java.security.InvalidParameterException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.seruhatto.training.exception.suggestion.exception.InvalidIpException;
 import com.seruhatto.training.exception.suggestion.exception.ServerUnavailableException;
 
 public class UseUncheckedException {
@@ -24,8 +24,8 @@ public class UseUncheckedException {
     private static boolean sendMessage(String serverIp) throws ServerUnavailableException {
 
 	if (serverIp.equals("0.0.0.0.0")) {
-	    // throw new Exception("Invalid IP");
-	    throw new InvalidParameterException("Invalid IP");
+	    // throw new Exception(serverIp);
+	    throw new InvalidIpException(serverIp);
 	} else if (serverIp.equals("1.1.1.1")) {
 	    // Something is Wrong
 	    throw new ServerUnavailableException();

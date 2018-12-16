@@ -64,12 +64,6 @@ public class ThrowExtremeMultiException {
 
 }
 
-//class ServerUnavailableException extends Exception {
-//    ServerUnavailableException() {
-//	super();
-//    }
-//}
-
 class MyException extends Exception {
     MyException() {
 	super();

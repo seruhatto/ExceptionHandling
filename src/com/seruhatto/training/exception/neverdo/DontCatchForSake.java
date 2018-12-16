@@ -4,7 +4,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Always catch only those exceptions that you can actually handle
+ * Always catch only those exceptions that you can actually handle.
+ * It doesn't help anything
  * @author seruhatto
  *
  */
@@ -26,7 +27,7 @@ public class DontCatchForSake {
 	    String abc = null;
 	    abc.toString();
 	} catch (Exception e) {
-	    throw new Exception(e);
+	    throw e;
 	}
     }
 }
