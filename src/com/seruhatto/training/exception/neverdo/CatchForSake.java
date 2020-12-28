@@ -3,12 +3,13 @@ package com.seruhatto.training.exception.neverdo;
 import org.apache.log4j.Logger;
 
 /**
- * Either log the exception or throw it but never do the both
+ * Always catch only those exceptions that you can actually handle. It doesn't help anything
  * 
  * @author seruhatto
+ *
  */
-public class LogAndThrow {
-	private static Logger logger = Logger.getLogger(LogAndThrow.class.getName());
+public class CatchForSake {
+	private static Logger logger = Logger.getLogger(CatchForSake.class.getName());
 
 	public static void main(String[] args) {
 		try {
@@ -25,8 +26,7 @@ public class LogAndThrow {
 			String abc = null;
 			abc.toString();
 		} catch (Exception e) {
-			logger.error("Error on doMethod()", e);// remove this line.
-			throw new Exception(e);
+			throw e;
 		}
 	}
 }
